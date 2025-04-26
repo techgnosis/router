@@ -20,6 +20,8 @@ ip link set dev enp4s0 up
 
 # bridge
 
+ip link add name br0 type bridge
+
 ip link set dev br0 up
 
 ip link set enp4s0 master br0
