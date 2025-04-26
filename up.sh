@@ -2,6 +2,15 @@
 
 set -euxo pipefail
 
+cp configs/ip-forward.conf /etc/sysctl.d/
+
+cp configs/resolv.conf /etc/
+
+cp configs/hostapd.conf /etc/hostapd/
+
+cp configs/dnsmasq.conf /etc/
+
+
 # intel 1GB
 
 ip address add 192.168.0.222/24 broadcast 192.168.0.255 dev enp0s31f6
@@ -37,6 +46,7 @@ bridge link
 # routes
 
 ip route add 0.0.0.0/0 via 192.168.0.1
+
 
 # iptables
 
