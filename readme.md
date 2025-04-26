@@ -47,6 +47,8 @@ Minimal rules
 * Block all incoming traffic except for existing outbound connections
 * NAT the internet bound traffic
 
+https://linux.die.net/man/8/iptables
+
 
 
 ## Potential features
