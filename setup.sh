@@ -16,3 +16,5 @@ cp dnsmasq.conf /etc/dnsmasq/
 ./realtek-up.sh
 
 ./routes.sh
+
+./bridge-up.sh

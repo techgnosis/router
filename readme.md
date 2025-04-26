@@ -29,8 +29,13 @@ Router has `/etc/resolv.conf` pointing to upstairs router
 
 Laptop `/etc/resolv.conf` points to upstairs router because the router has no DNS forwarder
 
+https://wiki.archlinux.org/title/Dnsmasq
+
+
 ## qualcomm
 The qualcomm card is turned into an AP with `hostapd`. The question of how to link the wifi layer 2 with the integrated NIC is a bridge network? I think the wifi and nic2 are bridged together?
+
+If you run `iw list` it shows the qualcomm has two "bands", and those refer to 2.4Ghz and 5Ghz
 
 https://wiki.archlinux.org/title/Software_access_point
 
