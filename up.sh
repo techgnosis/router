@@ -33,6 +33,10 @@ bridge link
 
 systemctl start hostapd
 
+# dns and dhcp
+
+systemctl start dnsmasq
+
 
 
 # routes
