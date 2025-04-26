@@ -14,6 +14,7 @@ less \
 which \
 direnv \
 net-tools \
+mitmproxy \
 dnsmasq \
 hostapd
 
