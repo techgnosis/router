@@ -12,5 +12,6 @@ efibootmgr \
 git \
 less \
 which \
+net-tools \
 dnsmasq \
 hostapd
