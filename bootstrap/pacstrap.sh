@@ -13,5 +13,3 @@ sudo \
 git \
 dnsmasq \
 hostapd
-
-cp -r /root/router /mnt/root/
