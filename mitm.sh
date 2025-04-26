@@ -2,6 +2,13 @@
 
 set -euo pipefail
 
+function handle_sigint() {
+    echo "Flushing iptables"
+    iptables --table nat --flush PREROUTING
+}
+
+trap handle_sigint SIGINT
+
 iptables \
 --table nat \
 --flush PREROUTING
@@ -23,3 +30,5 @@ iptables \
 --destination-port 443 \
 --jump REDIRECT \
 --to-port 8080
+
+mitmdump --mode transparent
