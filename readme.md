@@ -48,6 +48,13 @@ Minimal rules
 https://linux.die.net/man/8/iptables
 
 
+## mitmproxy
+
+You can run `mitm.sh` to use "transparent" mode. It will create some iptables rules and then run mitmproxy to receive traffic from those rules. When the script is ended the iptables rules are flushed.
+
+You still need the host that is creating the HTTP requests to trust the mitmproxy CA.
+
+
 
 ## Potential features
 * Wireguard
