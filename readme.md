@@ -49,7 +49,6 @@ systemd-networkd uses hostapd underneath. I can skip the middle man and use host
 * DHCP - just manually assign the IP on the client for now
 * DNS - use upstairs router for now
 * Firewall - if the box isnt internet facing then this can wait
-* NAT - I don't need NAT until I am internet facing
 * systemd-networkd - just setup IP manually, it's more fun. Don't reboot! :)
 * Wireguard - cool idea for later
 * GPU mining - if this becomes internet facing then I can mine and do real P2P
