@@ -12,14 +12,17 @@ Put [99-ip-forward.conf](99-ip-forward.conf) in `/etc/sysctl.d/`
 
 ### Integrated
 192.168.0.0/24
+
 Gets IP from upstairs router
 ### PCI
 10.0.0.1/24
+
 It is .1 because it's the gateway.
 
 
 ## DNS
 Router has /etc/resolv.conf pointing to upstairs router
+
 Laptop /etc/resolv.conf points to upstairs router because the router has no DNS forwarder
 
 ## WiFi
