@@ -9,8 +9,8 @@ cp resolv.conf /etc/
 
 cp hostapd.conf /etc/hostapd/
 
-./integrated-up.sh
+./intel-up.sh
 
-./pci-up.hostapd
+./realtek-up.sh
 
-./routes-up.sh
+./routes.sh

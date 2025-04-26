@@ -2,6 +2,9 @@
 
 North Star - as manual as I find palatable, which is generally pretty manual but staying in userland
 
+## Quick Setup
+Look at `setup.sh` for all the steps
+
 
 ## Linux
 The kernel itself needs one setting enabled
