@@ -57,3 +57,4 @@ systemd-networkd uses hostapd underneath. I can skip the middle man and use host
 * PiKVM
 * DNS encryption
 * IPv6
+* non-root user
