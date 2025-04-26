@@ -1,6 +1,6 @@
 #! /usr/bin/env bash
 
-set -euo pipefail
+set -euxo pipefail
 
 # intel 1GB
 
@@ -19,8 +19,7 @@ ip link set dev enp4s0 up
 
 
 # bridge
-
-ip link add name br0 type bridge
+# the bridge device gets made when I start hostapd
 
 ip link set dev br0 up
 
