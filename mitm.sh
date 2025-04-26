@@ -36,4 +36,5 @@ mitmweb \
 --no-web-open-browser \
 --web-port 8081 \
 --web-host 10.0.0.1 \
---set web_password='mitm'
+--set web_password='mitm' \
+--showhost
