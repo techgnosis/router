@@ -1,5 +1,0 @@
-#! /usr/bin/bash
-
-set -euo pipefail
-
-ip route add 0.0.0.0/0 via 192.168.0.1
