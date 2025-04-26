@@ -25,9 +25,9 @@ It is .1 because it's the gateway.
 
 
 ## DNS
-Router has `/etc/resolv.conf` pointing to CloudFlare 1.1.1.1
+Router `/etc/resolv.conf` is pointing to CloudFlare 1.1.1.1 although it is ignored by dnsmasq
 
-Laptop `/etc/resolv.conf` points to upstairs router because the router has no DNS forwarder
+Laptop `/etc/resolv.conf` is configured via DHCP via dnsmasq
 
 https://wiki.archlinux.org/title/Dnsmasq
 
@@ -46,8 +46,6 @@ systemd-networkd uses hostapd underneath. I can skip the middle man and use host
 
 
 ## Out of scope for V1
-* DHCP - just manually assign the IP on the client for now
-* DNS - use upstairs router for now
 * Firewall - if the box isnt internet facing then this can wait
 * systemd-networkd - just setup IP manually, it's more fun. Don't reboot! :)
 * Wireguard - cool idea for later
