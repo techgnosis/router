@@ -9,7 +9,8 @@ linux-firmware \
 micro \
 intel-ucode \
 efibootmgr \
-sudo \
 git \
+less \
+which \
 dnsmasq \
 hostapd
