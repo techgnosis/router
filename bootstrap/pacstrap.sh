@@ -18,4 +18,5 @@ dnsmasq \
 hostapd
 
 # net-tools is for netstat
-# less is got `git log` and `git diff`
+# less is for `git log` and `git diff`
+# direnv is for the SSID and WPA3_PASSPHRASE variables in hostapd.conf
