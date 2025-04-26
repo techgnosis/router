@@ -10,11 +10,12 @@ Put [99-ip-forward.conf](99-ip-forward.conf) in `/etc/sysctl.d/`
 
 ## Two NICs
 
-### Integrated
+### nic1
 192.168.0.0/24
 
 Gets IP from upstairs router
-### PCI
+
+### nic2
 10.0.0.1/24
 
 It is .1 because it's the gateway.
@@ -26,7 +27,7 @@ Router has /etc/resolv.conf pointing to upstairs router
 Laptop /etc/resolv.conf points to upstairs router because the router has no DNS forwarder
 
 ## WiFi
-The WiFi card is turned into an AP with `hostapd`. The question of how to link the wifi layer 2 with the integrated NIC is a bridge network
+The WiFi card is turned into an AP with `hostapd`. The question of how to link the wifi layer 2 with the integrated NIC is a bridge network? I think the wifi and nic2 are bridged together?
 
 https://wiki.archlinux.org/title/Software_access_point
 
