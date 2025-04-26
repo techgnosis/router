@@ -50,9 +50,7 @@ https://linux.die.net/man/8/iptables
 
 
 ## Potential features
-* Firewall - if the box isnt internet facing then this can wait
 * Wireguard
-* mitm-proxy
 * PiKVM
 * DNS encryption
 * IPv6
