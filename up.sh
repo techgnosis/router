@@ -35,5 +35,7 @@ ip route add 0.0.0.0/0 via 192.168.0.1
 
 # iptables
 
+iptables flush
+
 iptables -t nat -A POSTROUTING -s 10.0.0.0/24 -o enp0s31f6 -j MASQUERADE
 
