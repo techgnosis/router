@@ -15,3 +15,6 @@ which \
 net-tools \
 dnsmasq \
 hostapd
+
+# net-tools is for netstat
+# less is got `git log` and `git diff`
