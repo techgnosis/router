@@ -23,6 +23,15 @@ IP on upstairs network. DHCP server goes up to and includes .200.
 
 It is .1 because it's the gateway.
 
+## qualcomm
+The qualcomm card is turned into an AP with `hostapd`. The AP itself doesn't have an IP address so the qualcomm is bridged with the realtek
+
+https://wiki.archlinux.org/title/Software_access_point
+
+https://w1.fi/cgit/hostap/plain/hostapd/hostapd.conf
+
+https://wiki.archlinux.org/title/Network_bridge
+
 
 ## DNS
 Router `/etc/resolv.conf` is pointing to CloudFlare 1.1.1.1 although it is ignored by dnsmasq
@@ -32,17 +41,12 @@ Laptop `/etc/resolv.conf` is configured via DHCP via dnsmasq
 https://wiki.archlinux.org/title/Dnsmasq
 
 
-## qualcomm
-The qualcomm card is turned into an AP with `hostapd`. The question of how to link the wifi layer 2 with the integrated NIC is a bridge network? I think the wifi and nic2 are bridged together?
-https://wiki.archlinux.org/title/Network_bridge
+## iptables
 
-If you run `iw list` it shows the qualcomm has two "bands", and those refer to 2.4Ghz and 5Ghz
+Minimal rules
+* Block all incoming traffic except for existing outbound connections
+* NAT the internet bound traffic
 
-https://wiki.archlinux.org/title/Software_access_point
-
-Here are all the `hostapd.conf` flags https://w1.fi/cgit/hostap/plain/hostapd/hostapd.conf
-
-systemd-networkd uses hostapd underneath. I can skip the middle man and use hostapd. I don't need systemd at all really but I think Arch is still the best choice. I just won't use systemd-networkd for now.
 
 
 ## Potential features
