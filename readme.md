@@ -1,11 +1,12 @@
-Making my own router is still the best option I have for a meaningful project.
+# DIY Router
 
-Linux kernel
+North Star - as manual as find palatable
 
-sudo sysctl net.ipv4.ip_forward=1
-or
-sudo nano /etc/sysctl.d/99-ip-forward.conf
-`net.ipv4.ip_forward=1`
+
+### Linux
+The kernel itself needs one setting enabled
+
+Put [99-ip-forward.conf](99-ip-forward.conf) in `/etc/sysctl.d/`
 
 ## Two NICs
 
@@ -38,3 +39,8 @@ systemd-networkd - just setup IP manually
 Laptop NIC -> Switch -> NIC2 -> route table -> NIC1
 
 systemd-networkd uses hostapd underneath. I can skip the middle man and use hostapd. I don't need systemd at all really but I think Arch is still the best choice. I just won't use systemd-networkd for now.
+
+Reboot, in order -
+integrated-up.sh
+pci-up.sh
+routes-up.sh
