@@ -9,6 +9,8 @@ cp resolv.conf /etc/
 
 cp hostapd.conf /etc/hostapd/
 
+cp dnsmasq.conf /etc/dnsmasq/
+
 ./intel-up.sh
 
 ./realtek-up.sh

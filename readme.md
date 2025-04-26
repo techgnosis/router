@@ -1,22 +1,22 @@
 # DIY Router
 
-North Star - as manual as I find palatable, which is generally pretty manual but staying in userland
+Scripts and config files for use on Arch. It's very specific for my router hardware.
 
-## Quick Setup
-Look at `setup.sh` for all the steps
+## North Star
+As manual as I find palatable, which is generally pretty manual but staying in userland
 
 
 ## Linux
 The kernel itself needs one setting enabled
 
-Put [99-ip-forward.conf](99-ip-forward.conf) in `/etc/sysctl.d/`
+Put [ip-forward.conf](ip-forward.conf) in `/etc/sysctl.d/`
 
 ## Two NICs
 
 ### intel
-192.168.0.0/24
+192.168.0.222/24
 
-Gets IP from upstairs router
+IP on upstairs network
 
 ### realtek
 10.0.0.1/24
@@ -50,3 +50,4 @@ systemd-networkd uses hostapd underneath. I can skip the middle man and use host
 * LLM hosting
 * mitm-proxy
 * PiKVM
+* DNS encryption
