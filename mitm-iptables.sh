@@ -20,6 +20,6 @@ iptables \
 --append PREROUTING \
 --in-interface br0 \
 --protocol tcp \
---destionation-port 443 \
+--destination-port 443 \
 --jump REDIRECT \
 --to-port 8080
