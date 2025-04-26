@@ -3,7 +3,7 @@
 set -euo pipefail
 
 
-cp 99-ip-forward.conf /etc/systemctl.d/
+cp ip-forward.conf /etc/sysctl.d/
 
 cp resolv.conf /etc/
 
