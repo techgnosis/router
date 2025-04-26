@@ -16,7 +16,7 @@ Put [ip-forward.conf](ip-forward.conf) in `/etc/sysctl.d/`
 ### intel
 192.168.0.222/24
 
-IP on upstairs network
+IP on upstairs network. DHCP server goes up to and includes .200.
 
 ### realtek
 10.0.0.1/24
@@ -25,7 +25,7 @@ It is .1 because it's the gateway.
 
 
 ## DNS
-Router has `/etc/resolv.conf` pointing to upstairs router
+Router has `/etc/resolv.conf` pointing to CloudFlare 1.1.1.1
 
 Laptop `/etc/resolv.conf` points to upstairs router because the router has no DNS forwarder
 
@@ -34,6 +34,7 @@ https://wiki.archlinux.org/title/Dnsmasq
 
 ## qualcomm
 The qualcomm card is turned into an AP with `hostapd`. The question of how to link the wifi layer 2 with the integrated NIC is a bridge network? I think the wifi and nic2 are bridged together?
+https://wiki.archlinux.org/title/Network_bridge
 
 If you run `iw list` it shows the qualcomm has two "bands", and those refer to 2.4Ghz and 5Ghz
 
