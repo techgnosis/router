@@ -1,16 +1,16 @@
 # DIY Router
 
-North Star - as manual as find palatable
+North Star - as manual as I find palatable, which is generally pretty manual but staying in userland
 
 
-### Linux
+## Linux
 The kernel itself needs one setting enabled
 
 Put [99-ip-forward.conf](99-ip-forward.conf) in `/etc/sysctl.d/`
 
 ## Two NICs
 
-## Integrated
+### Integrated
 192.168.0.0/24
 Gets IP from upstairs router
 ### PCI
