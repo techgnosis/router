@@ -8,4 +8,4 @@ cp resolv.conf /etc/
 
 cp hostapd.conf /etc/hostapd/
 
-cp dnsmasq.conf /etc/dnsmasq/
+cp dnsmasq.conf /etc/
