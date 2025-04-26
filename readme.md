@@ -57,6 +57,7 @@ https://linux.die.net/man/8/iptables
 * DNS encryption
 * IPv6
 * Tailscale
+* content blocking
 
 ## Out of scope
 * non-root user
