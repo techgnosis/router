@@ -51,3 +51,4 @@ systemd-networkd uses hostapd underneath. I can skip the middle man and use host
 * mitm-proxy
 * PiKVM
 * DNS encryption
+* IPv6
