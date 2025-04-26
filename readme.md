@@ -6,10 +6,8 @@ Scripts and config files for use on Arch. It's very specific for my router hardw
 As manual as I find palatable, which is generally pretty manual but staying in userland
 
 
-## Linux
-The kernel itself needs one setting enabled
-
-Put [ip-forward.conf](ip-forward.conf) in `/etc/sysctl.d/`
+## Packet forwarding
+You need to enable packet forwarding in the kernel with `sysctl` by putting [ip-forward.conf](ip-forward.conf) in `/etc/sysctl.d/`
 
 ## Two NICs
 
