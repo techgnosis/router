@@ -45,15 +45,16 @@ Here are all the `hostapd.conf` flags https://w1.fi/cgit/hostap/plain/hostapd/ho
 systemd-networkd uses hostapd underneath. I can skip the middle man and use hostapd. I don't need systemd at all really but I think Arch is still the best choice. I just won't use systemd-networkd for now.
 
 
-## Out of scope for V1
+## Potential features
 * Firewall - if the box isnt internet facing then this can wait
-* systemd-networkd - just setup IP manually, it's more fun. Don't reboot! :)
-* Wireguard - cool idea for later
-* GPU mining - if this becomes internet facing then I can mine and do real P2P
-* LLM hosting
+* Wireguard
 * mitm-proxy
 * PiKVM
 * DNS encryption
 * IPv6
-* non-root user
 * Tailscale
+
+## Out of scope
+* non-root user
+* systemd-networkd
+* crypto
