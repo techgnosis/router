@@ -6,7 +6,7 @@ cp configs/ip-forward.conf /etc/sysctl.d/
 
 cp configs/resolv.conf /etc/
 
-cp configs/hostapd.conf /etc/hostapd/
+cat configs/hostapd.conf | envsubst > /etc/hostapd/hostapd.conf
 
 cp configs/dnsmasq.conf /etc/
 
