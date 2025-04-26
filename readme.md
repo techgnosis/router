@@ -59,3 +59,4 @@ systemd-networkd uses hostapd underneath. I can skip the middle man and use host
 * DNS encryption
 * IPv6
 * non-root user
+* Tailscale
