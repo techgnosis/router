@@ -3,7 +3,7 @@
 set -euo pipefail
 
 function handle_sigint() {
-    echo "Flushing iptables"
+    echo "\nFlushing iptables"
     iptables --table nat --flush PREROUTING
 }
 
