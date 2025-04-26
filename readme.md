@@ -9,7 +9,7 @@ As manual as I find palatable, which is generally pretty manual but staying in u
 ## Packet forwarding
 You need to enable packet forwarding in the kernel with `sysctl` by putting [ip-forward.conf](ip-forward.conf) in `/etc/sysctl.d/`
 
-## Two NICs
+## NICs
 
 ### intel
 192.168.0.222/24
@@ -21,7 +21,7 @@ IP on upstairs network. DHCP server goes up to and includes .200.
 
 It is .1 because it's the gateway.
 
-## qualcomm
+### qualcomm
 The qualcomm card is turned into an AP with `hostapd`. The AP itself doesn't have an IP address so the qualcomm is bridged with the realtek
 
 https://wiki.archlinux.org/title/Software_access_point
