@@ -21,8 +21,6 @@ ip link set dev enp0s31f6 up
 
 # realtek 2.5GB
 
-ip address add 10.0.0.1/24 broadcast 10.0.0.255 dev enp4s0
-
 ip link set dev enp4s0 up
 
 
@@ -33,6 +31,8 @@ ip link add name br0 type bridge
 ip link set dev br0 up
 
 ip link set enp4s0 master br0
+
+ip address add 10.0.0.1/24 broadcast 10.0.0.255 dev enp4s0
 
 bridge link
 
