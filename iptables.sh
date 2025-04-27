@@ -89,7 +89,7 @@ iptables \
 iptables \
 --table filter \
 --append OUTPUT \
---protcol udp \
+--protocol udp \
 --destination-port 123 \
 --jump ACCEPT
 
