@@ -60,6 +60,23 @@ iptables \
 --destination 1.1.1.1 \
 --jump ACCEPT
 
+# ntp
+iptables \
+--tables filter \
+--append OUTPUT \
+--protcol udp \
+--destination-port 123 \
+--jump ACCEPT
+
+# package updates
+iptables \
+--tables filter \
+--append OUTPUT \
+--protocol tcp \
+--match multiport \
+--destination-ports 80,443 \
+--jump ACCEPT
+
 
 
 
