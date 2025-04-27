@@ -57,7 +57,7 @@ You still need the host that is creating the HTTP requests to trust the mitmprox
 
 ## dufs
 
-`dufs` is a really lightweight file sharing service you can use to put files on the router host. `dufs` is a single static musl binary. Run the `dufs.sh` script to run it with the correct flag. `dufs` is not in the Arch repo so I included a download script.
+`dufs` is a really lightweight file sharing service you can use to put files on the router host. `dufs` is a single static musl binary. Run the `dufs.sh` script to run it with the correct flag to allow upload. `dufs` is not in the Arch repo so I included a download script.
 
 
 ## Potential features
