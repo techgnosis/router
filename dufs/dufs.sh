@@ -2,4 +2,4 @@
 
 set -euo pipefail
 
-dufs --allow-upload
+./dufs --allow-upload
