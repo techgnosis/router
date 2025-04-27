@@ -23,6 +23,16 @@ iptables \
 --state ESTABLISHED,RELATED \
 --jump ACCEPT
 
+iptables \
+--table filter \
+--append INPUT \
+--jump LOG \
+--match limit \
+--limit-burst 1 \
+--log-prefix "INPUT_DROP:" \
+--log-level info
+
+
 
 
 
@@ -47,6 +57,14 @@ iptables \
 --state ESTABLISHED,RELATED \
 --jump ACCEPT
 
+iptables \
+--table filter \
+--append FORWARD \
+--jump LOG \
+--match limit \
+--limit-burst 1 \
+--log-prefix "FORWARD_DROP:" \
+--log-level info
 
 
 
@@ -78,6 +96,15 @@ iptables \
 --match multiport \
 --destination-ports 80,443 \
 --jump ACCEPT
+
+iptables \
+--table filter \
+--append OUTPUT \
+--jump LOG \
+--match limit \
+--limit-burst 1 \
+--log-prefix "OUTPUT_DROP:" \
+--log-level info
 
 
 
