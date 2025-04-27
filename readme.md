@@ -68,3 +68,6 @@ You still need the host that is creating the HTTP requests to trust the mitmprox
 * non-root user
 * systemd-networkd
 * crypto
+
+## TODO
+* initramfs images seem to be not working
