@@ -19,16 +19,14 @@ iptables \
 iptables \
 --table filter \
 --append INPUT \
---match state \
---state ESTABLISHED,RELATED \
+--in-interface br0 \
 --jump ACCEPT
 
 iptables \
 --table filter \
 --append INPUT \
---match udp \
---protocol udp \
---destination-port 53 \
+--match state \
+--state ESTABLISHED,RELATED \
 --jump ACCEPT
 
 iptables \
