@@ -126,4 +126,7 @@ iptables \
 
 iptables \
 --table nat \
---append POSTROUTING --source 10.0.0.0/24 --out-interface enp0s31f6 --jump MASQUERADE
+--append POSTROUTING \
+--source 10.0.0.0/24 \
+--out-interface enp0s31f6 \
+--jump MASQUERADE
