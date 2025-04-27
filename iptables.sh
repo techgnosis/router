@@ -40,18 +40,18 @@ iptables \
 --flush FORWARD
 
 iptables \
---tables filter \
+--table filter \
 --policy FORWARD DROP
 
 iptables \
---tables filter \
+--table filter \
 --append FORWARD \
 --in-interface br0 \
 --out-interface enp0s31f6 \
 --jump ACCEPT
 
 iptables \
---tables filter \
+--table filter \
 --append FORWARD \
 --in-interface enp0s31f6 \
 --out-interface br0 \
@@ -76,18 +76,18 @@ iptables \
 --flush OUTPUT
 
 iptables \
---tables filter \
+--table filter \
 --policy OUTPUT DROP
 
 iptables \
---tables filter \
+--table filter \
 --append OUTPUT \
 --destination 1.1.1.1 \
 --jump ACCEPT
 
 # ntp
 iptables \
---tables filter \
+--table filter \
 --append OUTPUT \
 --protcol udp \
 --destination-port 123 \
@@ -95,7 +95,7 @@ iptables \
 
 # package updates
 iptables \
---tables filter \
+--table filter \
 --append OUTPUT \
 --protocol tcp \
 --match multiport \
