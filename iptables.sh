@@ -35,12 +35,14 @@ iptables \
 --tables filter \
 --append FORWARD \
 --in-interface br0 \
+--out-interface enp0s31f6 \
 --jump ACCEPT
 
 iptables \
 --tables filter \
 --append FORWARD \
 --in-interface enp0s31f6 \
+--out-interface br0 \
 --match state \
 --state ESTABLISHED,RELATED \
 --jump ACCEPT
