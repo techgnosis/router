@@ -55,6 +55,10 @@ You can run `mitm.sh` to use "transparent" mode. It will create some iptables ru
 You still need the host that is creating the HTTP requests to trust the mitmproxy CA, which you can get from [mitmweb](http://10.0.0.1:8081/?token=mitm)
 
 
+## dufs
+
+`dufs` is a really lightweight file sharing service you can use to put files on the router host. `dufs` is a single static musl binary. Run the `dufs.sh` script to run it with the correct flag. `dufs` is not in the Arch repo so I included a download script.
+
 
 ## Potential features
 * Wireguard
