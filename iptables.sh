@@ -26,6 +26,7 @@ iptables \
 iptables \
 --table filter \
 --append INPUT \
+--match udp \
 --destination-port 53 \
 --jump ACCEPT
 
