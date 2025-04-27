@@ -35,7 +35,9 @@ iptables \
 
 
 
-
+iptables \
+--table filter \
+--flush FORWARD
 
 iptables \
 --tables filter \
@@ -69,6 +71,9 @@ iptables \
 
 
 
+iptables \
+--table filter \
+--flush OUTPUT
 
 iptables \
 --tables filter \
