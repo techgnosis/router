@@ -26,6 +26,12 @@ iptables \
 iptables \
 --table filter \
 --append INPUT \
+--destination-port 53 \
+--jump ACCEPT
+
+iptables \
+--table filter \
+--append INPUT \
 --jump LOG \
 --match limit \
 --limit-burst 1 \
