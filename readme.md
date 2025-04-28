@@ -81,3 +81,6 @@ You still need the host that is creating the HTTP requests to trust the mitmprox
 
 ## TODO
 * initramfs images seem to be not working
+* https://github.com/dkorunic/pktstat-bpf
+	* looks perfect. actively updated. i can use XDP to watch packet ingress on intel
+	* binaries on github
