@@ -28,29 +28,21 @@ iptables \
 --table filter \
 --policy INPUT DROP
 
-iptables \
---table filter \
---append INPUT \
---protocol tcp \
---syn \
---match limit \
---limit 1/s \
---limit-burst 3 \
---jump ACCEPT
-
-
+# lets me run `curl localhost` in a router shell
 iptables \
 --table filter \
 --append INPUT \
 --in-interface lo \
 --jump ACCEPT
 
+# lets my laptop reach dnsmasq on the router
 iptables \
 --table filter \
 --append INPUT \
 --in-interface br0 \
 --jump ACCEPT
 
+# lets router processes get return traffic
 iptables \
 --table filter \
 --append INPUT \
@@ -59,6 +51,7 @@ iptables \
 --state ESTABLISHED,RELATED \
 --jump ACCEPT
 
+# any packets left after all the ACCEPT jumps is dropped after this log statement
 iptables \
 --table filter \
 --append INPUT \
@@ -80,6 +73,7 @@ iptables \
 --table filter \
 --policy FORWARD DROP
 
+# lets my laptop send internet bound traffic
 iptables \
 --table filter \
 --append FORWARD \
@@ -87,6 +81,7 @@ iptables \
 --out-interface enp0s31f6 \
 --jump ACCEPT
 
+# lets my laptop get return traffic
 iptables \
 --table filter \
 --append FORWARD \
@@ -113,6 +108,7 @@ iptables \
 --table nat \
 --flush POSTROUTING
 
+# lets hosts with private addresses reach internet hosts via SNAT
 iptables \
 --table nat \
 --append POSTROUTING \
