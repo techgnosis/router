@@ -38,6 +38,10 @@ Laptop `/etc/resolv.conf` is configured via DHCP via dnsmasq
 
 https://wiki.archlinux.org/title/Dnsmasq
 
+## DHCP
+
+10.0.0.2 to 10.0.0.100 via realtek
+
 
 ## iptables
 
