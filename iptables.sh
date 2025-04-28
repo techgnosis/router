@@ -65,6 +65,7 @@ iptables \
 --jump LOG \
 --match limit \
 --limit-burst 1 \
+--limit '30/minute' \
 --log-prefix "INPUT_DROP:" \
 --log-level info
 
@@ -101,6 +102,7 @@ iptables \
 --jump LOG \
 --match limit \
 --limit-burst 1 \
+--limit '30/minute' \
 --log-prefix "FORWARD_DROP:" \
 --log-level info
 
