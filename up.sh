@@ -12,6 +12,9 @@ ip link set dev enp0s31f6 up
 
 # realtek 2.5GB
 
+# not adding an IP because the IP goes on the bridge device
+# after this device is attached to the bridge
+
 ip link set dev enp4s0 up
 
 
@@ -22,6 +25,7 @@ ip link add name br0 type bridge
 ip link set dev br0 up
 
 ip link set enp4s0 master br0
+# there is no "link set wlp3s0 master br0"
 # the wifi device is added to the bridge by hostapd
 
 ip address add 10.0.0.1/24 broadcast 10.0.0.255 dev br0

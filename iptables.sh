@@ -43,6 +43,7 @@ iptables \
 iptables \
 --table filter \
 --append INPUT \
+--in-interface enp0s31f6 \
 --match state \
 --state ESTABLISHED,RELATED \
 --jump ACCEPT
