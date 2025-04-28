@@ -47,6 +47,8 @@ Minimal rules
 
 https://linux.die.net/man/8/iptables
 
+https://wiki.nftables.org/wiki-nftables/index.php/Netfilter_hooks
+
 
 ## mitmproxy
 
