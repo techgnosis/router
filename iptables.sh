@@ -2,6 +2,24 @@
 
 set -euxo pipefail
 
+# BRIEF REFRESHER EXAMPLE
+
+# PREROUTING -> INPUT or FORWARD 
+
+# CenturyLink Router
+# Public - 50.50.50.50
+# Private - 192.168.0.1
+
+# Laptop
+# Private - 192.168.0.79
+
+# Packet comes in
+# DEST 50.50.50.50
+# SNAT occurs in PREROUTING
+# Did the destination IP remain 50.50.50.50? INPUT
+# Did the destination IP become 192.168.0.1? INPUT
+# Did the destination IP become 192.168.0.79? FORWARD
+
 iptables \
 --table filter \
 --flush INPUT
@@ -73,49 +91,6 @@ iptables \
 --limit-burst 1 \
 --log-prefix "FORWARD_DROP:" \
 --log-level info
-
-
-
-
-iptables \
---table filter \
---flush OUTPUT
-
-# iptables \
-# --table filter \
-# --policy OUTPUT DROP
-
-# iptables \
-# --table filter \
-# --append OUTPUT \
-# --destination-port 53 \
-# --jump ACCEPT
-
-# # ntp
-# iptables \
-# --table filter \
-# --append OUTPUT \
-# --protocol udp \
-# --destination-port 123 \
-# --jump ACCEPT
-
-# # package updates
-# iptables \
-# --table filter \
-# --append OUTPUT \
-# --protocol tcp \
-# --match multiport \
-# --destination-ports 80,443 \
-# --jump ACCEPT
-
-# iptables \
-# --table filter \
-# --append OUTPUT \
-# --jump LOG \
-# --match limit \
-# --limit-burst 1 \
-# --log-prefix "OUTPUT_DROP:" \
-# --log-level info
 
 
 
