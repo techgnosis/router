@@ -31,6 +31,17 @@ iptables \
 iptables \
 --table filter \
 --append INPUT \
+--protocol tcp \
+--syn \
+--match limit \
+--limit 1/s \
+--limit-burst 3 \
+--jump ACCEPT
+
+
+iptables \
+--table filter \
+--append INPUT \
 --in-interface lo \
 --jump ACCEPT
 
