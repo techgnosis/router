@@ -42,7 +42,7 @@ iptables \
 --in-interface br0 \
 --jump ACCEPT
 
-# lets router processes get return traffic
+# lets router processes like pacman get return traffic
 iptables \
 --table filter \
 --append INPUT \
