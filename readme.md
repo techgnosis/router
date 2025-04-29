@@ -65,6 +65,15 @@ You still need the host that is creating the HTTP requests to trust the mitmprox
 
 `dufs` is a really lightweight file sharing service you can use to put files on the router host. `dufs` is a single static musl binary. Run the `dufs.sh` script to run it with the correct flag to allow upload. `dufs` is not in the Arch repo so I included a download script.
 
+## rustscan
+
+A Rust alternative to nmap. Says it is much, much faster.
+
+https://github.com/bee-san/RustScan
+
+`rustscan --no-config --addresses 192.168.0.1 --ulimit 5000 --scripts none --scan-order "Random"`
+
+
 
 ## Potential features
 * Wireguard
