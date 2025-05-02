@@ -82,6 +82,7 @@ https://github.com/bee-san/RustScan
 * IPv6
 * Tailscale
 * content blocking
+* TFTP for PXE boot
 
 ## Out of scope
 * non-root user
